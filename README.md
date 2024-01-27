@@ -16,6 +16,6 @@ With initial states:
 <li> random </li>
 <li> blinker </li>
 <li> glider </li>
-<li> pulsar </li>
+<li> pulsar (see pulsar.png for a screenshot) </li>
 </ul>
 </body>
