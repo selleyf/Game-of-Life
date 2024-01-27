@@ -20,7 +20,7 @@
 import os
 import shutil
 from time import sleep
-# import numpy as np
+import numpy as np
 
 def padding(cells, padding_style):
 # create a padding around the square to mimic neighbours on the far side
@@ -52,13 +52,15 @@ def next_gen(cells, *args):
     if args[0] == "factor":
         for i in range(0, n):
             for j in range(0, m):
-                live_nb = cells[(i-1) % n][j] + cells[(i-1) % n][(j-1) % m] + cells[i][(j-1) % m] + cells[(i+1) % n][(j-1) % m] + cells[(i+1) % n][j] + cells[(i+1) % n][(j+1) % m] + cells[i][(j+1) % m] + cells[(i-1) % n][(j+1) % m] 
+                live_nb = cells[(i-1) % n][j] + cells[(i-1) % n][(j-1) % m] + cells[i][(j-1) % m] + cells[(i+1) % n][(j-1) % m] 
+                + cells[(i+1) % n][j] + cells[(i+1) % n][(j+1) % m] + cells[i][(j+1) % m] + cells[(i-1) % n][(j+1) % m] 
                 if (cells[i][j] == 1 and (live_nb == 2 or live_nb == 3)) or (cells[i][j] == 0 and live_nb == 3):
                     new_cells[i][j] = 1
     elif args[0] == "lift":
         for i in range(1, n-1):
             for j in range(1, m-1):
-                live_nb = cells[i-1][j] + cells[i-1][j-1] + cells[i][j-1] + cells[i+1][j-1] + cells[i+1][j] + cells[i+1][j+1] + cells[i][j+1] + cells[i-1][j+1]
+                live_nb = cells[i-1][j] + cells[i-1][j-1] + cells[i][j-1] + cells[i+1][j-1] 
+                + cells[i+1][j] + cells[i+1][j+1] + cells[i][j+1] + cells[i-1][j+1]
                 if (cells[i][j] == 1 and (live_nb == 2 or live_nb == 3)) or (cells[i][j] == 0 and live_nb == 3):
                     new_cells[i-1][j-1] = 1
 
@@ -106,7 +108,7 @@ def main(initial_cells, time, *args):
 ### Some options for initial cells ###
 ######################################        
 
-# random_cells = np.random.randint(2, size=(35, 50)).tolist()
+random_cells = np.random.randint(2, size=(35, 50)).tolist()
 
 glider = [
            [1,0,0,0,0,0,0],
