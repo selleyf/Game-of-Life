@@ -14,8 +14,8 @@ With initial states:
 <p> </p>
 <ul>
 <li> random </li>
-<li> blinker </li>
-<li> glider </li>
+<li> blinker (see blinker.png for a screenshot) </li>
+<li> glider (see glider.png for a screenshot) </li>
 <li> pulsar (see pulsar.png for a screenshot) </li>
 </ul>
 </body>
