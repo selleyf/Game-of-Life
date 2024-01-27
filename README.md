@@ -1,5 +1,5 @@
 <head> 
-<h1> ASCII art Animation of Conway's Game of Life </h1> 
+<h1> ASCII Art Animation of Conway's Game of Life </h1> 
 <p> See:  https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life </p>
 </head>
 <body>
