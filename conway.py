@@ -81,7 +81,6 @@ def string_next_gen(cells):
     return conway_string[:-1]
 
 
-
 def main(initial_cells, time, *args):
 
     clear = lambda: os.system('cls')
@@ -110,19 +109,19 @@ def main(initial_cells, time, *args):
 
 random_cells = np.random.randint(2, size=(35, 50)).tolist()
 
-glider = [
-           [1,0,0,0,0,0,0],
+glider =  [
+            [1,0,0,0,0,0,0],
             [0,1,1,0,0,0,0],
             [1,1,0,0,0,0,0],
             [0,0,0,0,0,0,0],
             [0,0,0,0,0,0,0]
-        ]
+          ]
 
 blinker = [
-           [0,1,0],
-           [0,1,0],
-           [0,1,0]
-       ]
+            [0,1,0],
+            [0,1,0],
+            [0,1,0]
+          ]
 
 pulsar = [
            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
